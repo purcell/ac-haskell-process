@@ -97,7 +97,7 @@ This affects only the current buffer."
 (defun ac-haskell-process-popup-doc ()
   "Show documentation for the symbol at point in a popup."
   (interactive)
-  (let ((doc (ac-haskell-process-doc (symbol-at-point))))
+  (let ((doc (ac-haskell-process-doc (symbol-name (symbol-at-point)))))
     (when doc
      (popup-tip doc
                 :point (ac-haskell-process-symbol-start-pos)
