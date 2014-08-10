@@ -18,7 +18,7 @@ First, ensure `auto-complete` and `haskell-mode` are installed: I recommend
 using packages from [Melpa][melpa].
 
 You'll need both `auto-complete` and `haskell-mode` to be enabled and
-working, so please consult the corresponding documentation is you have
+working, so please consult the corresponding documentation if you have
 any trouble with this.
 
 Next, install `ac-haskell-process`. If you choose not to use the convenient
