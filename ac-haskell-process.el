@@ -70,7 +70,9 @@
 
 (defun ac-haskell-process-doc (sym)
   "Return the docstring for SYM."
-  (haskell-process-queue-sync-request (haskell-process) (concat ":doc " sym)))
+  (when (executable-find "hoogle")
+    (shell-command-to-string
+     (concat "hoogle --info " (shell-quote-argument sym)))))
 
 ;;;###autoload
 (defconst ac-source-haskell-process
