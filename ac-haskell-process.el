@@ -62,7 +62,7 @@
 
 (defun ac-haskell-process-available-p ()
   "Return non-nil if completions are available from this source."
-  (default-boundp 'haskell-session))
+  haskell-session)
 
 (defun ac-haskell-process-candidates ()
   "Return a list of completion candidates for the current `ac-prefix'."
