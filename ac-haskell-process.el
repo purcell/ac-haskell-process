@@ -28,7 +28,7 @@
 
 ;;; Installation:
 
-;; Available as a package in MELPA at http://melpa.milkbox.net/
+;; Available as a package in MELPA at http://melpa.org/
 ;; M-x package-install ac-haskell-process
 
 ;;; Usage:
