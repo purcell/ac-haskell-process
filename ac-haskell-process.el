@@ -57,6 +57,8 @@
 
 ;;; Code:
 
+(require 'auto-complete)
+(require 'haskell)
 (require 'haskell-process)
 
 
