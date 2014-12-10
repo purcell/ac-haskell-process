@@ -76,7 +76,7 @@ documentation for the completed symbol should also be displayed.
 Acknowledgements
 ================
 
-`ac-haskell-process` was written by [Steve Purcell](https://github.com/purcell), with important contributions from [Sam Aaron](https://github.com/samaaron).
+`ac-haskell-process` was written by [Steve Purcell](https://github.com/purcell).
 
 <hr>
 
