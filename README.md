@@ -57,6 +57,8 @@ for the symbol at point:
   '(define-key haskell-mode-map (kbd "C-c C-d") 'ac-haskell-process-popup-doc))
 ```
 
+This currently requires that Emacs can execute the "hoogle" command.
+
 Usage
 =====
 

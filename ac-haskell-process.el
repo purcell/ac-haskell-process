@@ -54,6 +54,8 @@
 ;;
 ;;     (eval-after-load 'haskell-mode
 ;;       '(define-key haskell-mode-map (kbd "C-c C-d") 'ac-haskell-process-popup-doc))
+;;
+;; This will only work if Emacs can execute the "hoogle" command.
 
 ;;; Code:
 
