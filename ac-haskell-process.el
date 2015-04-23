@@ -70,7 +70,19 @@
 
 (defun ac-haskell-process-candidates ()
   "Return a list of completion candidates for the current `ac-prefix'."
-  (haskell-process-get-repl-completions (haskell-process) ac-prefix))
+  (let ((pref
+         (if (save-excursion
+               (beginning-of-line)
+               (looking-at "import"))
+             (save-excursion
+               (let* ((p1 (point))
+                      (p0 (progn
+                            (beginning-of-line)
+                            (point))))
+                 (buffer-substring p0 p1)))
+           ac-prefix)))
+    (if (haskell-session-maybe)
+        (haskell-process-get-repl-completions (haskell-process) pref))))
 
 (defun ac-haskell-process-doc (sym)
   "Return the docstring for SYM."
