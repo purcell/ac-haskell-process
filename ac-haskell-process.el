@@ -65,8 +65,9 @@
 
 
 (defun ac-haskell-process-available-p ()
-  "Return non-nil if completions are available from this source."
-  (haskell-session-maybe))
+  "Return non-nil if completions are (or might later be) available from this source."
+  (or (haskell-session-maybe)
+      (memq major-mode '(haskell-mode haskell-interactive-mode))))
 
 (defun ac-haskell-process-candidates ()
   "Return a list of completion candidates for the current `ac-prefix'."
