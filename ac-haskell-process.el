@@ -72,12 +72,12 @@
 (defun ac-haskell-process-candidates ()
   "Return a list of completion candidates for the current `ac-prefix'."
   (when (haskell-session-maybe)
-    (let ((p1 (point))
-          (pref (or (save-excursion
-                      (beginning-of-line)
-                      (when (looking-at "import[ \t]")
-                        (buffer-substring (point) p1)))
-                    ac-prefix)))
+    (let* ((p1 (point))
+           (pref (or (save-excursion
+                       (beginning-of-line)
+                       (when (looking-at "import[ \t]")
+                         (buffer-substring (point) p1)))
+                     ac-prefix)))
       (haskell-process-get-repl-completions (haskell-process) pref))))
 
 (defun ac-haskell-process-doc (sym)
